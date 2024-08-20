@@ -69,37 +69,45 @@
       <div class="output" id="output">Result will be shown here</div>
     </div>
     <script>
-      // addition logic
-      document.getElementById('addBtn').addEventListener('click', function() {
+      // function to make code concise
+      function performOperation(operation) {
         const num1 = parseFloat(document.getElementById('number1').value);
         const num2 = parseFloat(document.getElementById('number2').value);
-        const result = num1 + num2;
-        document.getElementById('output').textContent = 'Sum: ' + result;
-      });
+        let result;
+        let outputText;
 
-      // subtraction logic
-      document.getElementById('subBtn').addEventListener('click', function() {
-        const num1 = parseFloat(document.getElementById('number1').value);
-        const num2 = parseFloat(document.getElementById('number2').value);
-        const result = num1 - num2;
-        document.getElementById('output').textContent = 'Difference: ' + result;
-      });
+        switch(operation) {
+          case 'add':
+            result = num1 + num2;
+            outputText = 'Sum: ' + result;
+            break;
+          case 'subtract':
+            result = num1 - num2;
+            outputText = 'Difference: ' + result;
+            break;
+          case 'multiply':
+            result = num1 * num2;
+            outputText = 'Product: ' + result;
+            break;
+          case 'divide':
+            if (num2 === 0) {
+              outputText = 'Division by zero is not possible.<br>Please enter a different number as denominator.';
+            } else {
+              result = num1 / num2;
+              outputText = 'Quotient: ' + result;
+            }
+            break;
+        }
 
-      // multiplication logic
-      document.getElementById('mulBtn').addEventListener('click', function() {
-        const num1 = parseFloat(document.getElementById('number1').value);
-        const num2 = parseFloat(document.getElementById('number2').value);
-        const result = num1 * num2;
-        document.getElementById('output').textContent = 'Product: ' + result;
-      });
+        // Display output
+        document.getElementById('output').innerHTML = outputText;
+      }
 
-      // division logic
-      document.getElementById('divBtn').addEventListener('click', function() {
-        const num1 = parseFloat(document.getElementById('number1').value);
-        const num2 = parseFloat(document.getElementById('number2').value);
-        const result = num1 / num2;
-        document.getElementById('output').innerHTML = (num2 == 0) ? 'Division by zero is not possible.<br>Please enter a different number as denominator.' : 'Quotient: ' + result;
-      });
+      // Listen for button clicks & perform operation based on it
+      document.getElementById('addBtn').addEventListener('click', () => performOperation("add"));
+      document.getElementById('subBtn').addEventListener('click', () => performOperation("subtract"));
+      document.getElementById('mulBtn').addEventListener('click', () => performOperation("multiply"));
+      document.getElementById('divBtn').addEventListener('click', () => performOperation("divide"));
     </script>
   </body>
 </html>
