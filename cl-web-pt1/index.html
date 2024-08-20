@@ -98,7 +98,7 @@
         const num1 = parseFloat(document.getElementById('number1').value);
         const num2 = parseFloat(document.getElementById('number2').value);
         const result = num1 / num2;
-        document.getElementById('output').textContent = 'Quotient: ' + result;
+        document.getElementById('output').innerHTML = (num2 == 0) ? 'Division by zero is not possible.<br>Please enter a different number as denominator.' : 'Quotient: ' + result;
       });
     </script>
   </body>
