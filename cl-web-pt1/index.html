@@ -69,18 +69,26 @@
       <div class="output" id="output">Result will be shown here</div>
     </div>
     <script>
+      // function to color output based on parameter
+      function displayOutput(text, newColor) {
+        const outputElement = document.getElementById('output');
+        outputElement.style.color = newColor || '';
+        outputElement.innerHTML = text;
+      }
+
       // function to make code concise
       function performOperation(operation) {
         const num1 = parseFloat(document.getElementById('number1').value);
         const num2 = parseFloat(document.getElementById('number2').value);
 
         if (isNaN(num1) || isNaN(num2)) {
-          document.getElementById('output').innerHTML = 'Input cannot be empty.';
+          displayOutput('Input cannot be empty.', 'firebrick');
           return;
         }
 
         let result;
         let outputText;
+        let outputColor = '';
 
         switch(operation) {
           case 'add':
@@ -98,6 +106,7 @@
           case 'divide':
             if (num2 === 0) {
               outputText = 'Division by zero is not possible.<br>Please enter a different number as denominator.';
+              outputColor = 'firebrick';
             } else {
               result = num1 / num2;
               outputText = 'Quotient: ' + result;
@@ -106,7 +115,7 @@
         }
 
         // Display output
-        document.getElementById('output').innerHTML = outputText;
+        displayOutput(outputText, outputColor);
       }
 
       // Listen for button clicks & perform operation based on it
