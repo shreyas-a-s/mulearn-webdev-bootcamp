@@ -78,5 +78,26 @@
     <div id="apple-shelf"></div>
     <div id="orange-shelf"></div>
     <button id="sort-btn">SORT</button>
+    <script>
+      let fruits = ["🍎", "🍊", "🍎", "🍊", "🍎"];
+      const fruitShelf = document.getElementById("fruit-shelf")
+      const appleShelf = document.getElementById("apple-shelf");
+      const orangeShelf = document.getElementById("orange-shelf");
+      const sortBtn = document.getElementById("sort-btn");
+
+      fruitShelf.textContent = fruits.join(' ');
+
+      function performSorting() {
+        const fruit = fruits.shift();
+        if (fruit == '🍎') {
+          appleShelf.textContent += fruit + ' ';
+        } else if (fruit == '🍊'){
+          orangeShelf.textContent += fruit + ' ';
+        }
+        fruitShelf.textContent = fruits.join(' ') || 'List is empty';
+      }
+
+      sortBtn.addEventListener('click', () => performSorting())
+    </script>
   </body>
 </html>
