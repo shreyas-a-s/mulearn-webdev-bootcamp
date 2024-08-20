@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+
+      .calculator {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .calculator input[type='number'] {
+        width: 88%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .calculator button {
+        width: 45%;
+        padding: 10px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4caf50;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .calculator button:hover {
+        background-color: #45a049;
+      }
+
+      .calculator .output {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #333;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="calculator">
+      <input type="number" id="number1" placeholder="Enter first number" />
+      <input type="number" id="number2" placeholder="Enter second number" />
+      <div>
+        <button id="addBtn">Add</button>
+        <button id="subBtn">Subtract</button>
+        <button id="mulBtn">Multiply</button>
+        <button id="divBtn">Divide</button>
+      </div>
+      <div class="output" id="output">Result will be shown here</div>
+    </div>
+  </body>
+</html>
