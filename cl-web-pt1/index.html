@@ -68,5 +68,38 @@
       </div>
       <div class="output" id="output">Result will be shown here</div>
     </div>
+    <script>
+      // addition logic
+      document.getElementById('addBtn').addEventListener('click', function() {
+        const num1 = parseFloat(document.getElementById('number1').value);
+        const num2 = parseFloat(document.getElementById('number2').value);
+        const result = num1 + num2;
+        document.getElementById('output').textContent = 'Sum: ' + result;
+      });
+
+      // subtraction logic
+      document.getElementById('subBtn').addEventListener('click', function() {
+        const num1 = parseFloat(document.getElementById('number1').value);
+        const num2 = parseFloat(document.getElementById('number2').value);
+        const result = num1 - num2;
+        document.getElementById('output').textContent = 'Difference: ' + result;
+      });
+
+      // multiplication logic
+      document.getElementById('mulBtn').addEventListener('click', function() {
+        const num1 = parseFloat(document.getElementById('number1').value);
+        const num2 = parseFloat(document.getElementById('number2').value);
+        const result = num1 * num2;
+        document.getElementById('output').textContent = 'Product: ' + result;
+      });
+
+      // division logic
+      document.getElementById('divBtn').addEventListener('click', function() {
+        const num1 = parseFloat(document.getElementById('number1').value);
+        const num2 = parseFloat(document.getElementById('number2').value);
+        const result = num1 / num2;
+        document.getElementById('output').textContent = 'Quotient: ' + result;
+      });
+    </script>
   </body>
 </html>
