@@ -98,6 +98,14 @@
       window.onload = function() {
         document.getElementById('search-bar').focus();
       };
+
+      const searchBar = document.getElementById("search-bar")
+      const searchBtn = document.getElementById("search-button")
+
+      searchBtn.addEventListener('click', function() {
+        if (searchBar.value === '') return;
+        window.location.href='https://www.google.com/search?q=' + encodeURIComponent(searchBar.value);
+      })
     </script>
   </body>
 </html>
