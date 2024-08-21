@@ -80,7 +80,7 @@
       </div>
       <form action="#" method="get" class="search-form">
         <div class="search-bar-container">
-          <input type="text" class="search-bar" name="q">
+          <input type="text" class="search-bar" id="search-bar" name="q">
         </div>
         <div class="button-container">
           <button type="submit" class="search-button">Google Search</button>
@@ -94,5 +94,10 @@
         </div>
       </form>
     </div>
+    <script>
+      window.onload = function() {
+        document.getElementById('search-bar').focus();
+      };
+    </script>
   </body>
 </html>
