@@ -5,9 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruit Sorting</title>
     <style>
+      :root {
+        --primary-bg-color: #202124;
+        --fruit-shelf-color: darkcyan;
+        --apple-shelf-color: skyblue;
+        --orange-shelf-color: darkgrey;
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --primary-bg-color: #f0f0f0;
+          --fruit-shelf-color: lightcyan;
+          --apple-shelf-color: lightblue;
+          --orange-shelf-color: lightgrey;
+        }
+      }
+
       body {
         margin: 0;
-        background-color: #a9a9a9;
+        background-color: var(--primary-bg-color);
         text-align: center;
         font-family: Arial, sans-serif;
       }
@@ -34,15 +50,15 @@
       }
 
       #orange-shelf {
-        background-color: lightcyan;
+        background-color: var(--orange-shelf-color);
       }
 
       #apple-shelf {
-        background-color: lightblue;
+        background-color: var(--apple-shelf-color);
       }
 
       #fruit-shelf {
-        background-color: lightgray;
+        background-color: var(--fruit-shelf-color);
       }
 
       button {
