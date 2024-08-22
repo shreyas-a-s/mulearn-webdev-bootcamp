@@ -5,11 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Clone</title>
     <style>
+      :root {
+        --primary-bg-color: #202124;
+        --secondary-bg-color: #303134;
+        --primary-text-color: white;
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --primary-bg-color: #f2f2f2;
+          --secondary-bg-color: #f8f9fa;
+          --primary-text-color: black;
+        }
+      }
       body {
         margin: 0;
         padding: 0;
         font-family: Arial, sans-serif;
-        background-color: #f2f2f2;
+        background-color: var(--primary-bg-color);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -44,6 +57,8 @@
         outline: none;
         box-shadow: none;
         font-size: 16px;
+        color: var(--primary-text-color);
+        background-color: var(--primary-bg-color);
       }
 
       .search-bar:focus {
@@ -60,16 +75,16 @@
       .search-button , .feeling-lucky-button{
         padding: 10px 20px;
         font-size: 14px;
-        color: #505050;
-        background-color: #f8f9fa;
-        border: 2px solid #f8f9fa;
+        color: var(--primary-text-color);
+        background-color: var(--secondary-bg-color);
+        border: 1px solid #f8f9fa;
         border-radius: 4px;
         cursor: pointer;
       }
 
       .search-button:hover, .feeling-lucky-button:hover {
-        border: 1px solid #dadce0;
-        background-color: #f8f9fa;
+        border: 1px solid var(--secondary-bg-color);
+        background-color: var(--secondary-bg-color);
       }
     </style>
   </head>
