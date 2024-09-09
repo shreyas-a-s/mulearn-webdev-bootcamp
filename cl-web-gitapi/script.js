@@ -3,6 +3,13 @@ const fullName = document.getElementById('full-name');
 const userName = document.getElementById('username');
 const repoGrid = document.getElementById('repo-grid');
 
+function truncateString(str, maxLength = 65) {
+  if (str.length > maxLength) {
+    return str.substring(0, maxLength) + '...';
+  } else {
+    return str;
+  }
+}
 
 axios.get('https://api.github.com/users/shreyas-a-s')
   .then(response => {
@@ -42,7 +49,7 @@ axios.get('https://api.github.com/users/shreyas-a-s/repos')
       // Create the repository description element
       const repoDescription = document.createElement('p');
       repoDescription.className = 'repo-description';
-      repoDescription.textContent = repo.description || 'No description';
+      repoDescription.textContent = repo.description ? truncateString(repo.description) : 'No description';
 
       // Create the link element
       const repoLink = document.createElement('a');
