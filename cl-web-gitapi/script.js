@@ -15,11 +15,21 @@ axios.get('https://api.github.com/users/shreyas-a-s')
     console.log('Error while fetching user info: ' + error);
   });
 
-axios.get('https://api.github.com/users/shreyas-a-s/repos?per_page=9')
+axios.get('https://api.github.com/users/shreyas-a-s/repos')
   .then(response => {
     const reposInfo = response.data;
-    console.log(reposInfo);
-    reposInfo.forEach(repo => {
+
+    // Sort the repos based on last updated time
+    reposInfo.sort((a, b) => {
+      const dateA = new Date(a.updated_at);
+      const dateB = new Date(b.updated_at);
+      return dateB - dateA;
+    });;
+
+    // get the first 9 repos
+    const slicedRepos = reposInfo.slice(0, 9);
+
+    slicedRepos.forEach(repo => {
       // Create the card element
       const card = document.createElement('div');
       card.className = 'repo-card';
