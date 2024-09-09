@@ -79,3 +79,52 @@ body {
 .repo-link:hover {
   text-decoration: underline;
 }
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+  }
+
+  .container {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .user-info {
+    color: #e0e0e0;
+  }
+
+  #profile-pic {
+    border: 4px solid #bbb;
+  }
+
+  #full-name {
+    color: #e0e0e0;
+  }
+
+  #username {
+    color: #aaa;
+  }
+
+  .repo-card {
+    border: 1px solid #333;
+    background-color: #2e2e2e;
+  }
+
+  .repo-card h3 {
+    color: #e0e0e0;
+  }
+
+  .repo-description {
+    color: #ccc;
+  }
+
+  .repo-link {
+    color: #4a90e2;
+  }
+
+  .repo-link:hover {
+    text-decoration: underline;
+  }
+}
