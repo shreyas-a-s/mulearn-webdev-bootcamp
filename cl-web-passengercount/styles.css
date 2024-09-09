@@ -1,0 +1,85 @@
+/* Apply a background image and basic styles to the body */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: url('https://example.com/your-train-image.jpg') no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
+}
+
+/* Style the header */
+header {
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* Style the main content */
+main {
+  padding: 100px 20px 20px; /* Add padding to make room for the fixed header */
+}
+
+/* Style the counter */
+.counter {
+  font-size: 4em;
+  margin: 20px 0;
+  color: black;
+}
+
+/* Style the buttons container */
+.buttons {
+  margin: 20px 0;
+}
+
+/* Style individual buttons */
+.btn {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn-secondary {
+  background-color: green;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary:hover {
+  background-color: darkgreen;
+}
+
+/* Style the paragraph */
+p {
+  font-size: 1.2em;
+  margin-top: 20px;
+  color: black;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .counter {
+    font-size: 3em;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 5px;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
