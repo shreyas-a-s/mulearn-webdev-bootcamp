@@ -15,6 +15,8 @@ const incrementCount = () => {
 
 const saveCount = () => {
   prevEnt.textContent += `${counter} - `;
+  counter = 0;
+  displayCount();
 }
 
 incBtn.addEventListener('click', incrementCount);
