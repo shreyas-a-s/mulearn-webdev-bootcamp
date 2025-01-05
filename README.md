@@ -10,3 +10,4 @@ This repo is to host the websites I am creating as part of Mulearn Web Developme
 - [Space Exploration](https://shreyas-a-s.github.io/mulearn-webdev-bootcamp/cl-web-spaceex)
 - [CSS Flexbox](https://shreyas-a-s.github.io/mulearn-webdev-bootcamp/cl-web-cssflex)
 - [React Info](https://cl-web-reactinfo.netlify.app)
+- [Style Stat](https://shreyas-a-s.github.io/mulearn-webdev-bootcamp/cl-web-stylestat)
