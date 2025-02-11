@@ -1,14 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Blackjack Game</title>
 	<link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		/* Light Mode */
+		@media (prefers-color-scheme: light) {
+			:root {
+				--bs-body-bg: white;
+				--bs-body-color: black;
+			}
+		}
+
+		/* Dark Mode */
+		@media (prefers-color-scheme: dark) {
+			:root {
+				--bs-body-bg: #121212;
+				--bs-body-color: white;
+			}
+		}
+	</style>
 </head>
 
-<body class="bg-dark text-white text-center">
+<body class="text-center">
 	<div class="container mt-5">
 		<h1 class="mb-4">Blackjack</h1>
 		<div class="mb-3">

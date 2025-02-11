@@ -1,3 +1,21 @@
+// Automatically adjust Bootstrap theme
+const updateTheme = () => {
+  const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  document.documentElement.setAttribute(
+    "data-bs-theme",
+    isDark ? "dark" : "light",
+  );
+};
+
+// Listen for theme changes
+window
+  .matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", updateTheme);
+
+// Set initial theme
+updateTheme();
+
+// Game logic
 const $startGameBtn = $("#startGame");
 const $hitBtn = $("#hit");
 const $standBtn = $("#stand");
