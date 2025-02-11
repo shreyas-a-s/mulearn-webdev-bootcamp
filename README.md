@@ -13,3 +13,5 @@ This repo is to host the websites I am creating as part of Mulearn Web Developme
 - [Style Stat](https://shreyas-a-s.github.io/mulearn-webdev-bootcamp/cl-web-stylestat)
 - [Create Stat](https://shreyas-a-s.github.io/mulearn-webdev-bootcamp/cl-web-createstat)
 - [Bday Gift](https://shreyas-a-s.github.io/mulearn-webdev-bootcamp/cl-web-bdaygift)
+- [Devenvironment](https://shreyas-a-s.github.io/mulearn-webdev-bootcamp/cl-web-devenvironment)
+- [Build Jack (Black Jack Game)](https://shreyas-a-s.github.io/mulearn-webdev-bootcamp/cl-web-buildjack)
